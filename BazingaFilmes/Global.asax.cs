@@ -11,11 +11,17 @@ namespace BazingaFilmes
 {
     public class Global : HttpApplication
     {
-        void Application_Start(object sender, EventArgs e)
+        protected void Application_Start(object sender, EventArgs e)
         {
             // Código que é executado na inicialização do aplicativo
-            RouteConfig.RegisterRoutes(RouteTable.Routes);
+            RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+        }
+
+        public static void RegisterRoutes(RouteCollection routes)
+        {
+            routes.MapPageRoute("Filme", "Filme", "~/Paginas/Filmes/Filme.aspx");
+            routes.MapPageRoute("CadastrarFilme", "CadastrarFilme", "~/Paginas/Filmes/CadastrarFilme.aspx");
         }
     }
 }
