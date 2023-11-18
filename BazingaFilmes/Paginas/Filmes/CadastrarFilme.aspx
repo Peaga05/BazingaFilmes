@@ -15,7 +15,22 @@
             </div>
             <div class="form-group">
                 <label for="txtData" class="form-label">Data de lançamento</label>
-                <input type="date" ID="txtData" class="form-control" runat="server" />
+                <input type="date" id="txtData" class="form-control" runat="server" />
+            </div>
+            <div class="form-group">
+                <label for="txtCategoria" class="form-label">Categoria</label>
+                <asp:TextBox ID="txtCategoria" class="form-control" runat="server"></asp:TextBox>
+            </div>
+            <div class="form-group">
+                <label for="sltClassificacao">Classificação</label>
+                <select runat="server" class="form-control" id="sltClassificacao">
+                    <option value="L">Livre</option>
+                    <option value="10">+10</option>
+                    <option value="12">+12</option>
+                    <option value="14">+14</option>
+                    <option value="16">+16</option>
+                    <option value="18">+18</option>
+                </select>
             </div>
         </form>
     </div>

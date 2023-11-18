@@ -22,6 +22,11 @@ namespace BazingaFilmes
         {
             routes.MapPageRoute("Filme", "Filme", "~/Paginas/Filmes/Filme.aspx");
             routes.MapPageRoute("CadastrarFilme", "CadastrarFilme", "~/Paginas/Filmes/CadastrarFilme.aspx");
+            routes.MapPageRoute("Idioma", "Idioma", "~/Paginas/Idioma/Idioma.aspx");
+            routes.MapPageRoute("CadastrarIdioma", "CadastrarIdioma", "~/Paginas/Idioma/CadastrarIdioma.aspx");
+            routes.MapPageRoute("AtualizarIdioma", "AtualizarIdioma/{id}", "~/Paginas/Idioma/AtualizarIdioma.aspx");
+            routes.MapPageRoute("DeletarIdioma", "DeletarIdioma/{id}", "~/Paginas/Idioma/DeletarIdioma.aspx");
+
         }
     }
 }
