@@ -116,23 +116,16 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="DataSet\BazingaFilmesDS.xsc">
-      <DependentUpon>BazingaFilmesDS.xsd</DependentUpon>
-    </Content>
     <Content Include="Content\bootstrap.min.css.map" />
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-reboot.min.css.map" />
     <Content Include="Content\bootstrap-reboot.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
-    <None Include="DataSet\BazingaFilmesDS.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>BazingaFilmesDS.Designer.cs</LastGenOutput>
-    </None>
-    <Content Include="DataSet\BazingaFilmesDS.xss">
-      <DependentUpon>BazingaFilmesDS.xsd</DependentUpon>
-    </Content>
+    <Content Include="Paginas\Idioma\CadastrarIdioma.aspx" />
+    <Content Include="Paginas\Idioma\DeletarIdioma.aspx" />
+    <Content Include="Paginas\Idioma\Idioma.aspx" />
+    <Content Include="Paginas\Idioma\AtualizarIdioma.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -150,6 +143,18 @@
     <Content Include="Scripts\bootstrap.js.map" />
     <Content Include="Scripts\bootstrap.bundle.min.js.map" />
     <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="BazingaFilmesDS.xsc">
+      <DependentUpon>BazingaFilmesDS.xsd</DependentUpon>
+    </Content>
+    <None Include="BazingaFilmesDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BazingaFilmesDS.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="BazingaFilmesDS.xss">
+      <DependentUpon>BazingaFilmesDS.xsd</DependentUpon>
+    </Content>
+    <Content Include="SiteCrud.Master" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Paginas\Filmes\CadastrarFilme.aspx" />
     <Content Include="Paginas\Filmes\Filme.aspx" />
@@ -251,6 +256,7 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
+    <Content Include="Style\main.css" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -269,7 +275,7 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="DataSet\BazingaFilmesDS.Designer.cs">
+    <Compile Include="BazingaFilmesDS.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>BazingaFilmesDS.xsd</DependentUpon>
@@ -284,6 +290,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="SiteCrud.Master.cs">
+      <DependentUpon>SiteCrud.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SiteCrud.Master.designer.cs">
+      <DependentUpon>SiteCrud.Master</DependentUpon>
+    </Compile>
     <Compile Include="Paginas\Filmes\CadastrarFilme.aspx.cs">
       <DependentUpon>CadastrarFilme.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -297,6 +310,34 @@
     </Compile>
     <Compile Include="Paginas\Filmes\Filme.aspx.designer.cs">
       <DependentUpon>Filme.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Idioma\CadastrarIdioma.aspx.cs">
+      <DependentUpon>CadastrarIdioma.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Idioma\CadastrarIdioma.aspx.designer.cs">
+      <DependentUpon>CadastrarIdioma.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Idioma\DeletarIdioma.aspx.cs">
+      <DependentUpon>DeletarIdioma.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Idioma\DeletarIdioma.aspx.designer.cs">
+      <DependentUpon>DeletarIdioma.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Idioma\Idioma.aspx.cs">
+      <DependentUpon>Idioma.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Idioma\Idioma.aspx.designer.cs">
+      <DependentUpon>Idioma.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Idioma\AtualizarIdioma.aspx.cs">
+      <DependentUpon>AtualizarIdioma.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Idioma\AtualizarIdioma.aspx.designer.cs">
+      <DependentUpon>AtualizarIdioma.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
