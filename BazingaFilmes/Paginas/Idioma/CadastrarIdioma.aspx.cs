@@ -34,7 +34,7 @@ namespace BazingaFilmes.Paginas.Idiomas
                 }
                 else
                 {
-                    Response.Redirect("Idioma.aspx");
+                    Response.Redirect("~/Paginas/Idioma/Idioma.aspx");
                 }
             }
 

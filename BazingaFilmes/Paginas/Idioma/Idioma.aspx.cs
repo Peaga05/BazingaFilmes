@@ -11,7 +11,10 @@ namespace BazingaFilmes.Paginas.Idiomas
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            GetIdiomas("");
+            if (!IsPostBack)
+            {
+                GetIdiomas("");
+            }
         }
 
         protected void GetIdiomas(string descricao)
@@ -27,11 +30,24 @@ namespace BazingaFilmes.Paginas.Idiomas
         {
             if (e.Row.RowType == DataControlRowType.DataRow)
             {
-                string editar = "<a class='btn btn-warning' href = 'AtualizarIdioma.aspx?id=" + e.Row.Cells[0].Text + "'>Editar</a>";
-                string deletar = "<a class='btn btn-danger' href = 'DeletarIdioma.aspx?id=" + e.Row.Cells[0].Text + "'>Excluir</a>";
+                int id = Convert.ToInt32(gvIdiomas.DataKeys[e.Row.RowIndex].Value);
+                string editar = $"<a class='btn btn-warning' href='AtualizarIdioma.aspx?id={id}'>Editar</a>";
+                string deletar = $"<a class='btn btn-danger' href='DeletarIdioma.aspx?id={id}'>Excluir</a>";
                 string link = editar + "  " + deletar;
                 e.Row.Cells[2].Text = link;
             }
+
+        }
+
+        protected void btnBusca_Click(object sender, EventArgs e)
+        {
+            GetIdiomas(txtBusca.Text);
+        }
+
+        protected void gvIdiomas_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            gvIdiomas.PageIndex = e.NewPageIndex;
+            GetIdiomas("");
         }
     }
 }
