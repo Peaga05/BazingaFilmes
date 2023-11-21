@@ -39,7 +39,7 @@ namespace BazingaFilmes.Paginas.Idioma
 
                 if(retorno == 0)
                 {
-                    Response.Redirect("Idioma.aspx");
+                    Response.Redirect("~/Paginas/Idioma/Idioma.aspx");
                 }
                 else if(retorno == 1)
                 {
@@ -47,6 +47,11 @@ namespace BazingaFilmes.Paginas.Idioma
                     alert.Visible = true;
                 }
             }
+        }
+
+        protected void btnVoltar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Paginas/Idioma/Idioma.aspx");
         }
     }
 }

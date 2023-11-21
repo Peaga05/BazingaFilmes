@@ -11,7 +11,25 @@ namespace BazingaFilmes.Paginas.Filmes
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                BazingaFilmesDSTableAdapters.IdiomaTableAdapter dt = new BazingaFilmesDSTableAdapters.IdiomaTableAdapter();
+                var result = dt.SelectIdioma("");
+                ddlIdiomas.DataSource = result;
+                ddlIdiomas.DataTextField = "descricao";
+                ddlIdiomas.DataValueField = "id";
+                ddlIdiomas.DataBind();
+            }
+        }
 
+        protected void btnSalvar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnVoltar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Paginas/Filmes/Filme.aspx");
         }
     }
 }

@@ -7,8 +7,8 @@
             <div class="row justify-content-center">
                 <div class="col-4 mt-3 mb-3">
                     <div class="mb-3 text-center">
-                        <asp:TextBox ID="txtBusca" runat="server" CssClass="m-auto form-control w-50 d-inline"></asp:TextBox>
-                        <asp:Button ID="btnBusca" CssClass="btn btn-outline-warning w-25" runat="server" Text="Buscar" OnClick="btnBusca_Click" />
+                        <asp:TextBox ID="txtBusca" runat="server" CssClass="m-auto form-control w-50 d-inline input-default"></asp:TextBox>
+                        <asp:Button ID="btnBusca" CssClass="btn btn-outline-warning w-25 btn-default" runat="server" Text="Buscar" OnClick="btnBusca_Click" />
                     </div>
                     <asp:GridView ID="gvIdiomas" CssClass="w-100 m-auto table table-striped text-center" runat="server" DataKeyNames="id" AutoGenerateColumns="False" OnRowDataBound="gvIdioma_RowDataBound" OnPageIndexChanging="gvIdiomas_PageIndexChanging" AllowPaging="True" PageSize="4">
                         <Columns>
@@ -23,6 +23,6 @@
         </div>
     </div>
     <div class=" mt-3 m-auto  text-center">
-        <a id="btnIdioma" runat="server" class="btn btn-outline-warning w-25" href="~/CadastrarIdioma">CADASTRAR IDIOMA</a>
+        <a id="btnIdioma" runat="server" class="btn btn-outline-warning w-25 btn-default" href="~/CadastrarIdioma">CADASTRAR IDIOMA</a>
     </div>
 </asp:Content>
