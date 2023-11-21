@@ -23,7 +23,7 @@ namespace BazingaFilmes.Paginas.Idioma
 
         protected void btnCancelar_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Idioma.aspx");
+            Response.Redirect("~/Paginas/Idioma/Idioma.aspx");
         }
 
         protected void btnApagar_Click(object sender, EventArgs e)
@@ -43,7 +43,7 @@ namespace BazingaFilmes.Paginas.Idioma
             }     
             else if(retorno == 0)
             {
-                Response.Redirect("Idioma.aspx");
+                Response.Redirect("~/Paginas/Idioma/Idioma.aspx");
             }
 
 

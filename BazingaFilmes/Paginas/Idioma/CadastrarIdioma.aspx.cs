@@ -39,5 +39,10 @@ namespace BazingaFilmes.Paginas.Idiomas
             }
 
         }
+
+        protected void btnVoltar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Paginas/Idioma/Idioma.aspx");
+        }
     }
 }

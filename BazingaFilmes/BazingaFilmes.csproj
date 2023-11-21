@@ -122,6 +122,12 @@
     <Content Include="Content\bootstrap-reboot.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="Paginas\Atores\Ator.aspx" />
+    <Content Include="Paginas\Atores\AtualizarAtor.aspx" />
+    <Content Include="Paginas\Atores\CadastrarAtor.aspx" />
+    <Content Include="Paginas\Atores\DeletarAtor.aspx" />
+    <Content Include="Paginas\Filmes\AtualizarFIlme.aspx" />
+    <Content Include="Paginas\Filmes\DeletarFilme.aspx" />
     <Content Include="Paginas\Idioma\CadastrarIdioma.aspx" />
     <Content Include="Paginas\Idioma\DeletarIdioma.aspx" />
     <Content Include="Paginas\Idioma\Idioma.aspx" />
@@ -290,6 +296,48 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Paginas\Atores\Ator.aspx.cs">
+      <DependentUpon>Ator.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Atores\Ator.aspx.designer.cs">
+      <DependentUpon>Ator.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Atores\AtualizarAtor.aspx.cs">
+      <DependentUpon>AtualizarAtor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Atores\AtualizarAtor.aspx.designer.cs">
+      <DependentUpon>AtualizarAtor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Atores\CadastrarAtor.aspx.cs">
+      <DependentUpon>CadastrarAtor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Atores\CadastrarAtor.aspx.designer.cs">
+      <DependentUpon>CadastrarAtor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Atores\DeletarAtor.aspx.cs">
+      <DependentUpon>DeletarAtor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Atores\DeletarAtor.aspx.designer.cs">
+      <DependentUpon>DeletarAtor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Filmes\AtualizarFIlme.aspx.cs">
+      <DependentUpon>AtualizarFIlme.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Filmes\AtualizarFIlme.aspx.designer.cs">
+      <DependentUpon>AtualizarFIlme.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Filmes\DeletarFilme.aspx.cs">
+      <DependentUpon>DeletarFilme.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Filmes\DeletarFilme.aspx.designer.cs">
+      <DependentUpon>DeletarFilme.aspx</DependentUpon>
+    </Compile>
     <Compile Include="SiteCrud.Master.cs">
       <DependentUpon>SiteCrud.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -364,7 +412,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Paginas\Atores\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

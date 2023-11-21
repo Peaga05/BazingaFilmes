@@ -46,13 +46,13 @@
                         <a class="nav-link" runat="server" href="~/">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" runat="server" href="~/Filme">Filmes</a>
+                        <a class="nav-link" runat="server" href="~/Paginas/Filmes/Filme.aspx">Filmes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" runat="server" href="#">Atores</a>
+                        <a class="nav-link" runat="server" href="~/Paginas/Atores/Ator.aspx">Atores</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" runat="server" href="~/Idioma">Idiomas</a>
+                        <a class="nav-link" runat="server" href="~/Paginas/Idioma/Idioma.aspx">Idiomas</a>
                     </li>
                 </ul>
             </div>
