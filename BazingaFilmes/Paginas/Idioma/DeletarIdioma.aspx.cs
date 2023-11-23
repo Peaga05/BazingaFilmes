@@ -28,6 +28,7 @@ namespace BazingaFilmes.Paginas.Idioma
 
         protected void btnApagar_Click(object sender, EventArgs e)
         {
+            //Realiza a exclusão física no banco e verifica os possíveis erros retornados
             int? retorno = null;
             BazingaFilmesDSTableAdapters.IdiomaTableAdapter dt = new BazingaFilmesDSTableAdapters.IdiomaTableAdapter();
             dt.DeleteIdioma(id, ref retorno);
@@ -45,8 +46,6 @@ namespace BazingaFilmes.Paginas.Idioma
             {
                 Response.Redirect("~/Paginas/Idioma/Idioma.aspx");
             }
-
-
         }
     }
 }

@@ -51,13 +51,13 @@ namespace BazingaFilmes.Paginas.Filmes
         protected global::System.Web.UI.WebControls.TextBox txtCategoria;
 
         /// <summary>
-        /// Controle Date1.
+        /// Controle txtData.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl Date1;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl txtData;
 
         /// <summary>
         /// Controle ddlIdiomas.
