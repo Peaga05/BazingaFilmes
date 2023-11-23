@@ -16,6 +16,7 @@ namespace BazingaFilmes.Paginas.Idiomas
 
         protected void btnSalvar_Click(object sender, EventArgs e)
         {
+            //Realiza o cadastro no banco e exibe mensagens de erro
             string descricao = txtDescricao.Text;
             int? ret = null;
             if (descricao == null || descricao == "")

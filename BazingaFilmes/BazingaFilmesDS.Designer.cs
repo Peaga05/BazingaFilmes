@@ -690,6 +690,10 @@ namespace BazingaFilmes {
             
             private global::System.Data.DataColumn columnclassificacao;
             
+            private global::System.Data.DataColumn columnidioma;
+            
+            private global::System.Data.DataColumn columnfuncao;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public FilmeDataTable() {
@@ -781,6 +785,22 @@ namespace BazingaFilmes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn idiomaColumn {
+                get {
+                    return this.columnidioma;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn funcaoColumn {
+                get {
+                    return this.columnfuncao;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -816,7 +836,7 @@ namespace BazingaFilmes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FilmeRow AddFilmeRow(string titulo, string descricao, System.DateTime lancamento, string categoria, int idIdioma, string classificacao) {
+            public FilmeRow AddFilmeRow(string titulo, string descricao, System.DateTime lancamento, string categoria, int idIdioma, string classificacao, string idioma, string funcao) {
                 FilmeRow rowFilmeRow = ((FilmeRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -825,7 +845,9 @@ namespace BazingaFilmes {
                         lancamento,
                         categoria,
                         idIdioma,
-                        classificacao};
+                        classificacao,
+                        idioma,
+                        funcao};
                 rowFilmeRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowFilmeRow);
                 return rowFilmeRow;
@@ -862,6 +884,8 @@ namespace BazingaFilmes {
                 this.columncategoria = base.Columns["categoria"];
                 this.columnidIdioma = base.Columns["idIdioma"];
                 this.columnclassificacao = base.Columns["classificacao"];
+                this.columnidioma = base.Columns["idioma"];
+                this.columnfuncao = base.Columns["funcao"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -881,6 +905,10 @@ namespace BazingaFilmes {
                 base.Columns.Add(this.columnidIdioma);
                 this.columnclassificacao = new global::System.Data.DataColumn("classificacao", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnclassificacao);
+                this.columnidioma = new global::System.Data.DataColumn("idioma", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnidioma);
+                this.columnfuncao = new global::System.Data.DataColumn("funcao", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnfuncao);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid}, true));
                 this.columnid.AutoIncrement = true;
@@ -893,6 +921,7 @@ namespace BazingaFilmes {
                 this.columndescricao.MaxLength = 255;
                 this.columncategoria.MaxLength = 255;
                 this.columnclassificacao.MaxLength = 255;
+                this.columnidioma.MaxLength = 255;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1793,6 +1822,38 @@ namespace BazingaFilmes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string idioma {
+                get {
+                    try {
+                        return ((string)(this[this.tableFilme.idiomaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'idioma\' na tabela \'Filme\' é DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFilme.idiomaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string funcao {
+                get {
+                    try {
+                        return ((string)(this[this.tableFilme.funcaoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'funcao\' na tabela \'Filme\' é DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFilme.funcaoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IstituloNull() {
                 return this.IsNull(this.tableFilme.tituloColumn);
             }
@@ -1861,6 +1922,30 @@ namespace BazingaFilmes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetclassificacaoNull() {
                 this[this.tableFilme.classificacaoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsidiomaNull() {
+                return this.IsNull(this.tableFilme.idiomaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetidiomaNull() {
+                this[this.tableFilme.idiomaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsfuncaoNull() {
+                return this.IsNull(this.tableFilme.funcaoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetfuncaoNull() {
+                this[this.tableFilme.funcaoColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -2690,6 +2775,7 @@ namespace BazingaFilmes.BazingaFilmesDSTableAdapters {
             tableMapping.ColumnMappings.Add("categoria", "categoria");
             tableMapping.ColumnMappings.Add("idIdioma", "idIdioma");
             tableMapping.ColumnMappings.Add("classificacao", "classificacao");
+            tableMapping.ColumnMappings.Add("idioma", "idioma");
             this._adapter.TableMappings.Add(tableMapping);
         }
         

@@ -15,6 +15,7 @@ namespace BazingaFilmes.Paginas.Idioma
             id = Convert.ToInt32(Request.QueryString["id"]);
             if (!IsPostBack)
             {
+                //Busca o idioma referente ao id passado com paramentro e exibe seus dados na tela
                 BazingaFilmesDSTableAdapters.IdiomaTableAdapter dt = new BazingaFilmesDSTableAdapters.IdiomaTableAdapter();
                 BazingaFilmesDS.IdiomaDataTable result = dt.SelectIdiomaId(id);
                 txtDescricao.Text = result[0].descricao;
@@ -26,6 +27,7 @@ namespace BazingaFilmes.Paginas.Idioma
         {
             string descricao = txtDescricao.Text;
 
+            //Verifica se o usuário digitou algo válido
             if (descricao == null || descricao == "")
             {
                 lblMensagemErro.InnerText = "Erro: campo vazio!";
@@ -33,6 +35,7 @@ namespace BazingaFilmes.Paginas.Idioma
             }
             else
             {
+                //Realiza o update no banco e exibe menssagem de erro de algo de errado acontecer.
                 int? retorno = null;
                 BazingaFilmesDSTableAdapters.IdiomaTableAdapter dt = new BazingaFilmesDSTableAdapters.IdiomaTableAdapter();
                 dt.UpdateIdioma(descricao, id, ref retorno);

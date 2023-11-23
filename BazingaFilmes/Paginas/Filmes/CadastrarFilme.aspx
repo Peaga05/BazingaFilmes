@@ -32,8 +32,7 @@
                 </div>
                 <div class="form-group">
                     <label for="txtData" class="form-label lbl-default">Data de lançamento</label>
-                    <input type="date" id="Date1" class="form-control input-default" runat="server" />
-
+                    <input type="date" id="txtData" class="form-control input-default" runat="server" />
                 </div>
                 <div class="form-group">
                     <label for="ddlIdiomas" class="form-label lbl-default">Idioma:</label>

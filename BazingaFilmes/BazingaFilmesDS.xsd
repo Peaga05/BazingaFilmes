@@ -102,6 +102,7 @@
               <Mapping SourceColumn="categoria" DataSetColumn="categoria" />
               <Mapping SourceColumn="idIdioma" DataSetColumn="idIdioma" />
               <Mapping SourceColumn="classificacao" DataSetColumn="classificacao" />
+              <Mapping SourceColumn="idioma" DataSetColumn="idioma" />
             </Mappings>
             <Sources>
               <DbSource ConnectionRef="BazingaFilmesDBConnectionString (Web.config)" DbObjectName="BazingaFilmesDB.dbo.deleteFilme" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="DeleteFilme" Modifier="Public" Name="DeleteFilme" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="DeleteFilme">
@@ -254,7 +255,7 @@
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="BazingaFilmesDBConnectionString (Web.config)" DbObjectName="BazingaFilmesDB.dbo.updateIdioma" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="UpdateIdioma" Modifier="Public" Name="UpdateIdioma" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="UpdateIdioma">
+              <DbSource ConnectionRef="BazingaFilmesDBConnectionString (Web.config)" DbObjectName="BazingaFilmesDB.dbo.updateIdioma" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="UpdateIdioma" Modifier="Public" Name="UpdateIdioma" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="UpdateIdioma">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.updateIdioma</CommandText>
@@ -332,6 +333,14 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="idioma" msprop:Generator_ColumnVarNameInTable="columnidioma" msprop:Generator_ColumnPropNameInRow="idioma" msprop:Generator_ColumnPropNameInTable="idiomaColumn" msprop:Generator_UserColumnName="idioma" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="funcao" msprop:Generator_ColumnVarNameInTable="columnfuncao" msprop:Generator_ColumnPropNameInRow="funcao" msprop:Generator_ColumnPropNameInTable="funcaoColumn" msprop:Generator_UserColumnName="funcao" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
