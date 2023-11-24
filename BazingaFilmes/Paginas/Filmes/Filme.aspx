@@ -27,6 +27,6 @@
         </div>
     </div>
     <div class=" mt-3 m-auto  text-center">
-        <a id="btnIdioma" runat="server" class="btn btn-outline-warning w-25 btn-default" href="~/CadastrarFilme">CADASTRAR FILME</a>
+        <a id="btnFilme" runat="server" class="btn btn-outline-warning w-25 btn-default" href="~/CadastrarFilme">CADASTRAR FILME</a>
     </div>
 </asp:Content>

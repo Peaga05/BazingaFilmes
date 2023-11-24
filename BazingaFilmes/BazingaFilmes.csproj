@@ -126,6 +126,7 @@
     <Content Include="Paginas\Atores\AtualizarAtor.aspx" />
     <Content Include="Paginas\Atores\CadastrarAtor.aspx" />
     <Content Include="Paginas\Atores\DeletarAtor.aspx" />
+    <Content Include="Paginas\Atuacao\CadastrarAtuacao.aspx" />
     <Content Include="Paginas\Filmes\AtualizarFIlme.aspx" />
     <Content Include="Paginas\Filmes\DeletarFilme.aspx" />
     <Content Include="Paginas\Idioma\CadastrarIdioma.aspx" />
@@ -323,6 +324,13 @@
     </Compile>
     <Compile Include="Paginas\Atores\DeletarAtor.aspx.designer.cs">
       <DependentUpon>DeletarAtor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Atuacao\CadastrarAtuacao.aspx.cs">
+      <DependentUpon>CadastrarAtuacao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Atuacao\CadastrarAtuacao.aspx.designer.cs">
+      <DependentUpon>CadastrarAtuacao.aspx</DependentUpon>
     </Compile>
     <Compile Include="Paginas\Filmes\AtualizarFIlme.aspx.cs">
       <DependentUpon>AtualizarFIlme.aspx</DependentUpon>

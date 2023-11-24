@@ -7,47 +7,65 @@
 // </gerado automaticamente>
 //------------------------------------------------------------------------------
 
-namespace BazingaFilmes
+namespace BazingaFilmes.Paginas.Atuacao
 {
 
 
-    public partial class _Default
+    public partial class CadastrarAtuacao
     {
 
         /// <summary>
-        /// Controle txtBusca.
+        /// Controle ddlFilme.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtBusca;
+        protected global::System.Web.UI.WebControls.DropDownList ddlFilme;
 
         /// <summary>
-        /// Controle btnBusca.
+        /// Controle ddlAtor.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnBusca;
+        protected global::System.Web.UI.WebControls.DropDownList ddlAtor;
 
         /// <summary>
-        /// Controle gvAtuacao.
+        /// Controle btnSalvar.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvAtuacao;
+        protected global::System.Web.UI.WebControls.Button btnSalvar;
 
         /// <summary>
-        /// Controle btnAtuacao.
+        /// Controle btnVoltar.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor btnAtuacao;
+        protected global::System.Web.UI.WebControls.Button btnVoltar;
+
+        /// <summary>
+        /// Controle alert.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl alert;
+
+        /// <summary>
+        /// Controle lblMensagemErro.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblMensagemErro;
     }
 }
