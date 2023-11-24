@@ -42,12 +42,12 @@ namespace BazingaFilmes.Paginas.Filmes
         protected global::System.Web.UI.WebControls.GridView gvFilme;
 
         /// <summary>
-        /// Controle btnIdioma.
+        /// Controle btnFilme.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor btnIdioma;
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor btnFilme;
     }
 }
