@@ -9,9 +9,16 @@ namespace BazingaFilmes.Paginas.Atores
 {
     public partial class DeletarAtor : System.Web.UI.Page
     {
+        int id;
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            id = Convert.ToInt32(Request.QueryString["id"]);
+            if (!IsPostBack)
+            {
+                BazingaFilmesDSTableAdapters.AtorTableAdapter dt = new BazingaFilmesDSTableAdapters.AtorTableAdapter();
+                BazingaFilmesDS.AtorDataTable result = dt.SelectAtorById(id);
+                lblAtor.InnerText = result[0].nome;
+            }
         }
     }
 }
