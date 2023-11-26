@@ -361,3 +361,6 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/BazingaFilmes/Paginas/Atuacao/Atuacao.aspx
+/BazingaFilmes/Paginas/Atuacao/Atuacao.aspx.cs
+/BazingaFilmes/Paginas/Atuacao/Atuacao.aspx.designer.cs
